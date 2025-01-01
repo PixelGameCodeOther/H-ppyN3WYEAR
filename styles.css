@@ -99,14 +99,6 @@ footer {
     }
 }
 
-@media (max-width: 600px) {
-    #timer {
-        flex-direction: column;
-    }
-    .time {
-        max-width: 90vw;
-    }
-}
 .container {
     position: absolute;
     inset: 0;
