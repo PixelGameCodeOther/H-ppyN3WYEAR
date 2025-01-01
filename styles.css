@@ -3,57 +3,66 @@ body {
     margin: 0;
     padding: 0;
     background-color: #121212;
-    color: #0f0; /* Green monotone for text */
+    color: #0f0;
     text-align: center;
+    overflow: hidden;
 }
 
 header {
-    background-color: #005500; /* Dark green */
-    color: #0f0; /* Green text */
+    background-color: #005500;
+    color: #0f0;
     padding: 1rem;
 }
 
 main {
     padding: 2rem;
+    padding-bottom: 5rem;
 }
 
 #countdown {
     margin: 2rem 0;
     animation: fadeIn 2s ease-in;
 }
+
 #timer {
     display: flex;
     justify-content: center;
-    gap: 2rem; /* Space between buttons */
-    width: 90vw; /* Takes most of the screen width */
+    gap: 2rem;
+    width: 90vw;
     margin: 0 auto;
-    background: none; /* No background for the container */
-    flex-wrap: wrap; /* Allows wrapping to prevent overflow */
+    background: none;
+    flex-wrap: wrap;
 }
 
 .time {
     flex: 1;
-    max-width: 20vw; /* Ensure buttons don't get too wide */
-    min-width: 10vw; /* Ensure minimum width */
+    max-width: 20vw;
+    min-width: 10vw;
     padding: 2rem;
-    background: #003300; /* Dark green for button background */
-    border-radius: 10px; /* Rounded edges for "slip" effect */
+    background: #003300;
+    border-radius: 10px;
     text-align: center;
     animation: bounce 2s infinite;
-    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.2); /* Add glowing effect */
+    box-shadow: 0 5px 15px rgba(0, 255, 0, 0.2);
 }
 
 .time span {
     display: block;
-    font-size: 5rem; /* Larger font for numbers */
+    font-size: 5rem;
     font-weight: bold;
     color: #0f0;
 }
 
 .time small {
     display: block;
-    font-size: 1.5rem; /* Labels slightly smaller than numbers */
+    font-size: 1.5rem;
     color: #0f0;
+}
+
+.time:hover {
+    transform: translateY(-5px) scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 255, 0, 0.4);
+    cursor: pointer;
 }
 
 #celebration {
@@ -63,8 +72,8 @@ main {
 }
 
 footer {
-    background-color: rgba(0, 85, 0, 0.5); /* Transparent green */
-    color: #0f0; /* Green text */
+    background-color: rgba(0, 85, 0, 0.5);
+    color: #0f0;
     text-align: center;
     padding: 1rem;
     position: fixed;
@@ -89,11 +98,16 @@ footer {
         transform: translateY(-10px);
     }
 }
-/*
-More comprehensive version at shenanigans.shoghisimon.ca/collection/css-rain-bg/
- */
 
- .container {
+@media (max-width: 600px) {
+    #timer {
+        flex-direction: column;
+    }
+    .time {
+        max-width: 90vw;
+    }
+}
+.container {
     position: absolute;
     inset: 0;
   }
@@ -260,4 +274,3 @@ More comprehensive version at shenanigans.shoghisimon.ca/collection/css-rain-bg/
         426.5px 6480px;
     }
   }
-  
