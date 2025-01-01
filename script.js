@@ -35,3 +35,5 @@ document.addEventListener("DOMContentLoaded", () => {
     const timerInterval = setInterval(updateCountdown, 1000);
     updateCountdown();
 });
+
+// it work, yet how we ask, was it worth it?
